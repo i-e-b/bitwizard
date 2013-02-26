@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace BitWizard
+﻿namespace BitWizard
 {
 	public class ArrayByteOrder
 	{
@@ -21,7 +16,8 @@ namespace BitWizard
 					byte a = *p;
 					p++;
 					byte b = *p;
-					*(p - 1) = a;
+					*p = a;
+					p++;
 					*(p - 2) = b;
 				}
 			}
